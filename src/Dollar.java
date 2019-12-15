@@ -8,5 +8,5 @@ public class Dollar {
 		
 	}
 	
-	int amount;
+	int amount = 10;
 }
