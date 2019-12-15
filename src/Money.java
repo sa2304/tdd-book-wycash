@@ -1,5 +1,5 @@
 
-class Money {
+class Money implements Expression {
 	Money(int amount, String currency) {
 		this.amount = amount;
 		this.currency = currency;
@@ -19,7 +19,7 @@ class Money {
 				currency().equals(money.currency());
 	}
 	
-	Money plus(Money addend) {
+	Expression plus(Money addend) {
 		return new Money(amount + addend.amount, currency);
 	}
 	
