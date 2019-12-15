@@ -6,7 +6,7 @@ class Money {
 	}
 	
 	Money times(int multiplier) {
-		return null;
+		return new Money(amount * multiplier, currency);
 	}
 	
 	public String currency() {

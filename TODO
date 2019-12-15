@@ -10,7 +10,7 @@
 + 5 CHF * 2 = 10 CHF
 - Дублирование Dollar/Franc
 + Общие операции equals()
-- Общие операции times()
++ Общие операции times()
 + Сравнение франков (Franc) и долларов (Dollar)
 - Валюта?
 - Нужен ли тест testFrancMultiplication()?
