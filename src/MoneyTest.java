@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
@@ -64,5 +65,25 @@ public class MoneyTest {
 		bank.addRate("CHF", "USD", 2);
 		Money result = bank.reduce(Money.franc(2), "USD");
 		assertEquals(Money.dollar(1), result);
+	}
+	
+	/**
+	 * Можно ли использовать в качестве ключа хеш-таблицы двухэлементныйй массив, содержащий две валюты?
+	 * 
+	 * В книге сказано, что тест провалился, но у меня проходит успешно. 
+	 * Значит, в поздней версии Java поведение изменили?
+	 * 
+	 * Пойдем вместе с книгой и введем на замену класс Pair
+	 */
+	@Test
+	public void testArrayEquals() {
+		assertEquals(new Object[] {"abc"}, new Object[] {"abc"});
+		assertEquals(new Object[] {"abc", "def"}, new Object[] {"abc", "def"});
+		assertNotEquals(new Object[] {"abc", "def"}, new Object[] {"abc", "---"});
+	}
+	
+	@Test
+	public void testIdentityRate() {
+		assertEquals(1, new Bank().rate("USD", "USD"));
 	}
 }
