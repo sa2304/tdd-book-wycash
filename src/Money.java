@@ -19,7 +19,7 @@ class Money implements Expression {
 				currency().equals(money.currency());
 	}
 	
-	Expression plus(Money addend) {
+	Expression plus(Expression addend) {
 		return new Sum(this, addend);
 	}
 	
