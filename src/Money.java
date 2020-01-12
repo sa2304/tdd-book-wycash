@@ -5,7 +5,7 @@ class Money implements Expression {
 		this.currency = currency;
 	}
 	
-	Expression times(int multiplier) {
+	public Expression times(int multiplier) {
 		return new Money(amount * multiplier, currency);
 	}
 	
