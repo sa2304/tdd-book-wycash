@@ -1,6 +1,6 @@
 
 public class Sum implements Expression {
-	Sum(Money augend, Money addend) {
+	Sum(Expression augend, Expression addend) {
 		this.augend = augend;
 		this.addend = addend;
 	}
