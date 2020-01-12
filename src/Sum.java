@@ -11,6 +11,6 @@ public class Sum implements Expression {
 		return new Money(amount, to);
 	}
 	
-	Money augend;
-	Money addend;
+	Expression augend;
+	Expression addend;
 }
