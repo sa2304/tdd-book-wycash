@@ -19,5 +19,5 @@
 + Сравнение франков (Franc) и долларов (Dollar)
 + Валюта?
 + Нужен ли тест testFrancMultiplication()?
-- Sum.plus
++ Sum.plus
 - Expression.times
