@@ -14,7 +14,7 @@ public class Bank {
 		rates.put(new Pair(from, to), new Integer(rate));	
 	}
 	
-	private Hashtable rates;
+	private Hashtable rates = new Hashtable<Pair, Integer>();
 }
 
  
